@@ -139,13 +139,13 @@ namespace WeatherForecast
             get { return _coordsY; }
             set
             {
-                if (value > 90)
+                if (value > 180)
                 {
-                    _coordsY = 90;
+                    _coordsY = 180;
                 }
-                else if (value < -90)
+                else if (value < 0)
                 {
-                    _coordsY = -90;
+                    _coordsY = 0;
                 }
                 else
                 {

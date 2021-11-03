@@ -25,7 +25,7 @@ namespace WeatherForecast
                 {
                     case "1":
                         {
-                            Console.Write("Введите название параметра(city,api,temp,mode,cords,id,exit): ");
+                            Console.Write("Введите название параметра(city,api,temp,mode,lang,cords,id,exit): ");
                             input = Console.ReadLine();
                             OptionsWriting(input);
                             break;
@@ -90,14 +90,14 @@ namespace WeatherForecast
                             weatherRequest.WriteMode(mode);
                             break;
                         }
-                    case "cords":
+                    case "lang":
                         {
                             Console.Write("Введите Язык:");
                             string lang = Console.ReadLine();
                             weatherRequest.WriteLang(lang);
                             break;
                         }
-                    case "lat":
+                    case "cords":
                         {
                             Console.Write("Введите Координаты по широте:");
                             double.TryParse(Console.ReadLine(), out double x);
